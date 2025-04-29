@@ -1,0 +1,22 @@
+version: 1
+configuration:
+  has_webserver: true
+  scoring:
+    command: pip install -r requirements.txt && python3 -m pytest --junit-xml=unit.xml
+    files:
+      - unit.xml
+  ide_config:
+    default_open_files:
+      - app.py
+      - src/agent.py
+      - src/engine/hackerrank.py
+      - data/ai_skills_report.pdf
+    project_menu:
+      run: streamlit run app.py --server.port 8000
+      install: pip install -r requirements.txt
+      test: python3 -m pytest
+  readonly_paths:
+    - src/engine/test_hackerrank.py
+    - src/test_agent.py
+    - src/__init__.py
+    - data/ai_skills_report.pdf

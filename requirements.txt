@@ -1,0 +1,10 @@
+pytest
+langchain_community
+langchain
+typing
+langchain_core
+langchain_openai
+streamlit
+faiss-cpu
+tiktoken
+pytest-asyncio
